@@ -23,7 +23,7 @@ import HomepageHeading from "./components/home_page_layout";
  * Neither Semantic UI nor Semantic UI React offer a responsive navbar, however, it can be implemented easily.
  * It can be more complicated, but you can create really flexible markup.
  */
-export class DesktopContainer extends Component {
+class DesktopContainer extends Component {
   state = { percent: 0 };
 
   componentDidMount() {
@@ -104,7 +104,7 @@ export class DesktopContainer extends Component {
   }
 }
 
-export class MobileContainer extends Component {
+class MobileContainer extends Component {
   state = {};
 
   handlePusherClick = () => {
@@ -177,12 +177,16 @@ export class MobileContainer extends Component {
   }
 }
 
-export const ResponsiveContainer = ({ children }) => (
-  <div>
-    <DesktopContainer>{children}</DesktopContainer>
-    <MobileContainer>{children}</MobileContainer>
-  </div>
-);
+class ResponsiveContainer extends Component {
+  render() {
+    return (
+      <div>
+        <DesktopContainer>{this.props.children}</DesktopContainer>
+        <MobileContainer>{this.props.children}</MobileContainer>
+      </div>
+    );
+  }
+}
 
 ResponsiveContainer.propTypes = {
   children: PropTypes.node
@@ -193,3 +197,5 @@ DesktopContainer.propTypes = {
 MobileContainer.propTypes = {
   children: PropTypes.node
 };
+
+export default ResponsiveContainer;

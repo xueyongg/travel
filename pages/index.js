@@ -16,7 +16,7 @@ import {
   Visibility,
   Progress
 } from "semantic-ui-react";
-import { ResponsiveContainer } from "./home";
+import ResponsiveContainer from "./home";
 import FeatureComponent from "./components/feature";
 
 export default class HomepageLayout extends Component {
