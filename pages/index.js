@@ -45,6 +45,94 @@ export default class HomepageLayout extends Component {
           imagePosition={"left"}
           buttonText={"Test this out"}
         />
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"right"}
+        />
+
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"left"}
+          buttonText={"Test this out"}
+        />
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"right"}
+        />
+
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"left"}
+          buttonText={"Test this out"}
+        />
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"right"}
+        />
+
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"left"}
+          buttonText={"Test this out"}
+        />
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"right"}
+        />
+
+        <FeatureComponent
+          header={"We Help Companies and Companions"}
+          description={
+            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
+          }
+          imageURL={
+            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+          }
+          imagePosition={"left"}
+          buttonText={"Test this out"}
+        />
       </ResponsiveContainer>
     );
   }
