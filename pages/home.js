@@ -55,7 +55,10 @@ class DesktopContainer extends Component {
     const { children } = this.props;
     const { fixed, percent } = this.state;
     return (
-      <Responsive {...Responsive.onlyComputer}>
+      <Responsive
+        minWidth={Responsive.onlyTablet.minWidth}
+        maxWidth={Responsive.onlyWidescreen.maxWidth}
+      >
         <Visibility
           once={false}
           onBottomPassed={this.showFixedMenu}
@@ -121,7 +124,7 @@ class MobileContainer extends Component {
     const { sidebarOpened } = this.state;
 
     return (
-      <Responsive {...Responsive.onlyMobile}>
+      <Responsive minWidth={150} maxWidth={Responsive.onlyMobile.maxWidth}>
         <Sidebar.Pushable>
           <Sidebar
             as={Menu}

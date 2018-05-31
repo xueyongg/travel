@@ -14,5 +14,10 @@ module.exports = withCSS({
       }
     });
     return config;
+  },
+  exportPathMap: function(defaultPathMap) {
+    return {
+      "/": { page: "/" }
+    };
   }
 });
