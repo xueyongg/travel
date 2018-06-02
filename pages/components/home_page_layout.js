@@ -48,6 +48,7 @@ class HomepageHeading extends Component {
   unStickOverlay = () => this.setState({ overlayFixed: false });
 
   render() {
+    let { mobile, overlayFixed, overlayRect } = this.state;
     const overlayStyle = {
       float: "left",
       margin: "0em 3em 3em 0em"
@@ -71,7 +72,6 @@ class HomepageHeading extends Component {
       left: "940px"
     };
 
-    let { mobile, overlayFixed, overlayRect } = this.state;
     return (
       <Container text>
         <Header
@@ -95,6 +95,7 @@ class HomepageHeading extends Component {
             marginTop: mobile ? "0.5em" : "1.5em"
           }}
         />
+
         <Visibility
           offset={80}
           once={false}
@@ -108,7 +109,17 @@ class HomepageHeading extends Component {
         >
           <Menu
             icon="labeled"
-            style={overlayFixed ? fixedOverlayMenuStyle : overlayMenuStyle}
+            style={
+              overlayFixed
+                ? {
+                    ...fixedOverlayMenuStyle,
+                    left:
+                      window.innerWidth * 0.7 > 940
+                        ? 940
+                        : window.innerWidth * 0.7
+                  }
+                : overlayMenuStyle
+            }
             vertical={overlayFixed ? true : false}
           >
             <Menu.Item>
