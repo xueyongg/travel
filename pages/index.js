@@ -18,121 +18,27 @@ import {
 } from "semantic-ui-react";
 import ResponsiveContainer from "./home";
 import FeatureComponent from "./components/feature";
+const data = require("../static/data/data.json");
 
 export default class HomepageLayout extends Component {
   render() {
     return (
       <ResponsiveContainer>
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"right"}
-        />
-
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"left"}
-          buttonText={"Test this out"}
-        />
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"right"}
-        />
-
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"left"}
-          buttonText={"Test this out"}
-        />
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"right"}
-        />
-
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"left"}
-          buttonText={"Test this out"}
-        />
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"right"}
-        />
-
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"left"}
-          buttonText={"Test this out"}
-        />
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"right"}
-        />
-
-        <FeatureComponent
-          header={"We Help Companies and Companions"}
-          description={
-            "We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs... through pure data analytics."
-          }
-          imageURL={
-            "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
-          }
-          imagePosition={"left"}
-          buttonText={"Test this out"}
-        />
+        {data.features.map((feature, i) => {
+          let { header, description, image } = feature;
+          return (
+            <FeatureComponent
+              header={header}
+              description={description}
+              imageURL={
+                image
+                  ? image
+                  : "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+              }
+              imagePosition={i % 2 === 0 ? "right" : "left"}
+            />
+          );
+        })}
       </ResponsiveContainer>
     );
   }
