@@ -47,13 +47,6 @@ export default class FeatureComponent extends Component {
                 {header}
               </Header>
               <p style={{ fontSize: "1.33em" }}>{description}</p>
-              <Header as="h3" style={{ fontSize: "2em" }}>
-                We Make Bananas That Can Dance
-              </Header>
-              <p style={{ fontSize: "1.33em" }}>
-                Yes that's right, you thought it was the stuff of dreams, but
-                even bananas can be bioengineered.
-              </p>
             </Grid.Column>
             {imagePosition === "right" ? (
               <Grid.Column floated="right" width={6}>
@@ -63,13 +56,13 @@ export default class FeatureComponent extends Component {
               ""
             )}
           </Grid.Row>
-          <Grid.Row>
+          {/* <Grid.Row>
             <Grid.Column textAlign="center">
               <Button size="huge">
                 {buttonText ? buttonText : "Check Them Out"}
               </Button>
             </Grid.Column>
-          </Grid.Row>
+          </Grid.Row> */}
         </Grid>
       </Segment>
     );
