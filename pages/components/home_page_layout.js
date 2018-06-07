@@ -63,20 +63,20 @@ class HomepageHeading extends Component {
 
     const overlayMenuStyle = {
       position: "relative",
-      left: "200px",
+      left: "230px",
       transition: "left 0.5s ease"
     };
 
     const fixedOverlayMenuStyle = {
       ...overlayMenuStyle,
-      left: "940px"
+      left: "1240px"
     };
 
     return (
       <Container text>
         <Header
           as="h1"
-          content="Imagine-a-Company"
+          content="Your One-stop Travel Solution"
           inverted
           style={{
             fontSize: mobile ? "2em" : "4em",
@@ -87,7 +87,7 @@ class HomepageHeading extends Component {
         />
         <Header
           as="h2"
-          content="Do whatever you want when you want to."
+          content="Plan | Translate | Discover | Jot"
           inverted
           style={{
             fontSize: mobile ? "1.5em" : "1.7em",
