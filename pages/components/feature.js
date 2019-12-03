@@ -2,19 +2,12 @@ import PropTypes from "prop-types";
 import React, { Component } from "react";
 import {
   Button,
-  Container,
-  Divider,
   Grid,
   Header,
   Icon,
   Image,
-  List,
-  Menu,
-  Responsive,
   Segment,
-  Sidebar,
-  Visibility,
-  Progress
+  Embed
 } from "semantic-ui-react";
 import Link from "next/link";
 
@@ -37,10 +30,12 @@ export default class FeatureComponent extends Component {
       header,
       description,
       src,
+      isVideo,
+      videoSource,
+      videoPlaceholderImage,
       imagePosition,
       buttonText,
-      isVideo,
-      buttonUrl
+      buttonUrl,
     } = this.state;
     return (
       <Segment style={{ padding: "8em 0em" }} vertical>
@@ -72,8 +67,8 @@ export default class FeatureComponent extends Component {
                       padding: 10,
                     },
                   }}
-                  placeholder={src}
-                  source='youtube' // youtube || vimeo || undefined
+                  placeholder={videoPlaceholderImage}
+                  source={videoSource} 
                   />
                   : 
                   <Image bordered rounded fluid src={src} />

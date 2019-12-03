@@ -15,18 +15,20 @@
     {
       "header": "Memories",
       "description": "Log your travel memories down. We offer a simple way for you to share photos, jot down memories and geo-tag restaurants.",
-      "src": "",
-      "isVideo": false,
-      "source": "",
-      "buttonUrl": "dd",
-      "buttonText": "dd"
+      "src": "O6Xo21L0ybE",
+      "isVideo": true,
+      "videoSource": "youtube",
+      "videoPlaceholderImage": "",
+      "buttonUrl": "",
+      "buttonText": ""
     },
     {
       "header": "Plan Your Budgets",
       "description": "Track your bills and other group shared expenses, so that everyone gets paid back.",
       "src": "",
       "isVideo": false,
-      "source": "",
+      "videoSource": "",
+      "videoPlaceholderImage": "",
       "buttonUrl": "",
       "buttonText": ""
     },
@@ -35,7 +37,8 @@
       "description": "Use your camera to translate menus or directories, or simply key in words for translation.",
       "src": "",
       "isVideo": false,
-      "source": "",
+      "videoSource": "",
+      "videoPlaceholderImage": "",
       "buttonUrl": "",
       "buttonText": ""
     },
@@ -44,7 +47,8 @@
       "description": "We are here to help you visualise and plan your multi-day or multi-city trips! Upgrade to premium to view your trip on an offline map.",
       "src": "",
       "isVideo": false,
-      "source": "",
+      "videoSource": "",
+      "videoPlaceholderImage": "",
       "buttonUrl": "",
       "buttonText": ""
     }

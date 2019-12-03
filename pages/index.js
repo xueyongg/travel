@@ -22,7 +22,9 @@ export default class HomepageLayout extends Component {
       email={data.socialMedia.email}
       >
         {data.features.map((feature, index) => {
-          let { header, description, src, isVideo, buttonUrl,buttonText } = feature;
+          let { header, description, src, 
+            isVideo, videoSource, videoPlaceholderImage,
+            buttonUrl,buttonText } = feature;
           return (
             <FeatureComponent
               key={index}
@@ -34,6 +36,10 @@ export default class HomepageLayout extends Component {
                   : placeholderImagePath
               }
               isVideo={isVideo}
+              videoSource={videoSource} // youtube || vimeo || undefined
+              videoPlaceholderImage={ videoPlaceholderImage
+                ? videoPlaceholderImage
+                : placeholderImagePath}
               imagePosition={index % 2 === 0 ? "right" : "left"}
               buttonUrl={buttonUrl}
               buttonText={buttonText}
