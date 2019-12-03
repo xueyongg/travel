@@ -5,7 +5,7 @@ import ResponsiveContainer from "./home";
 import FeatureComponent from "./components/feature";
 import {Container, Header, Divider, Icon} from "semantic-ui-react";
 
-const application = "travelApp";
+const application = "songkids2019";
 const data = require(`../static/data/${application}_data.json`);
 const placeholderImagePath = "../static/images/placeholder/image-placeholder.png";
 

@@ -78,7 +78,8 @@ class DesktopContainer extends Component {
             inverted
             textAlign="center"
             style={{ 
-              minHeight: 700, 
+              minHeight: 600, 
+              maxHeight: 800,
               padding: "1em 0em",
               backgroundImage: `url("${headerImageSrc}")`,
               backgroundRepeat: "no-repeat",
@@ -107,7 +108,8 @@ class DesktopContainer extends Component {
                 />
                 {iconTitle}
               </Menu.Item>
-              <Menu.Item position='right' style={{marginRight: "4em"}}><Radio toggle label='Burmese'/></Menu.Item>
+              <Menu.Item position='right' style={{marginRight: "4em"}}>
+                <Radio toggle label='Burmese'/></Menu.Item>
             </Menu>
 
             <HomepageHeading 

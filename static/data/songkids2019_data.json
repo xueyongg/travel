@@ -1,0 +1,83 @@
+{
+  "header": {
+    "iconTitle": "The Song in Every Child",
+    "iconImageSrc":"https://songkids.org/wp-content/uploads/2018/08/cropped-Songkids_GreenCircle.png",
+    "landingTitle": "Songkids Yangon 2019",
+    "landingTitleColor": "black",
+    "landingSubtitle": "Self | Others | Nature | God",
+    "landingSubtitleColor": "black",
+    "imageSrc": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2046&q=80"
+  },
+  "socialMedia": {
+    "twitter": "https://www.twitter.com",
+    "facebook": "https://www.facebook.com/songkidssg/",
+    "email": "mailto:xueyongjoshua@gmail.com"
+  },
+  "introduction":{
+    "title": "Who are we?",
+    "titleSize": "h2",
+    "paragraphs": [
+      "We are a social movement consisting of people with a passion to empower the next generation to develop their talents using arts, music and leadership forms.", 
+      "As a ground-up tribe, we resource the work of children and youth in the 4 to 14 age window. We began locally, in Singapore, giving guitars away to children who could not afford one. Then, we made trips to orphanages and kids centres in Indonesia and Myanmar and did the same for children there.",
+      " Soon, we became a movement of like-minded dreamers interested in the work of empowering the next generation. As a movement and not an organisation, we do not store funds. Instead, we raise them as needs arise and we connect the right people with the resources to fulfil our SONG-OUT schemes."
+    ]
+  },
+  "divider": {"wording": "Workshops", "wordSize": "h2"},
+  "features": [
+    {
+      "header": "Arts",
+      "description": "Log your travel memories down. We offer a simple way for you to share photos, jot down memories and geo-tag restaurants.",
+      "imageSrc": "/static/images/features/1.jpg",
+      "src": "O6Xo21L0ybE",
+      "isVideo": true,
+      "videoSource": "youtube",
+      "videoPlaceholderImage": "/static/images/features/1.jpg",
+      "buttonUrl": "https://www.phuaxueyong.com",
+      "buttonText": "Visit my web"
+    },
+    {
+      "header": "How to plan for children ministry",
+      "description": "Track your bills and other group shared expenses, so that everyone gets paid back.",
+      "imageSrc": "/static/images/features/2.jpg",
+      "src": "",
+      "isVideo": false,
+      "videoSource": "",
+      "videoPlaceholderImage": "",
+      "buttonUrl": "",
+      "buttonText": ""
+    },
+    {
+      "header": "What is my dream?",
+      "description": "Use your camera to translate menus or directories, or simply key in words for translation.",
+      "imageSrc": "/static/images/features/3.jpg",
+      "src": "",
+      "isVideo": false,
+      "videoSource": "",
+      "videoPlaceholderImage": "",
+      "buttonUrl": "",
+      "buttonText": ""
+    },
+    {
+      "header": "Creative Art",
+      "description": "We are here to help you visualise and plan your multi-day or multi-city trips! Upgrade to premium to view your trip on an offline map.",
+      "imageSrc": "/static/images/features/4.jpg",
+      "src": "",
+      "isVideo": false,
+      "videoSource": "",
+      "videoPlaceholderImage": "",
+      "buttonUrl": "",
+      "buttonText": ""
+    },
+    {
+      "header": "Know thy self",
+      "description": "Use your camera to translate menus or directories, or simply key in words for translation.",
+      "imageSrc": "/static/images/features/1.jpg",
+      "src": "",
+      "isVideo": false,
+      "videoSource": "",
+      "videoPlaceholderImage": "",
+      "buttonUrl": "",
+      "buttonText": ""
+    }
+  ]
+}
