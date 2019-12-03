@@ -14,9 +14,9 @@ import {
   Segment,
   Sidebar,
   Visibility,
-  Progress
+  Progress,
+  Radio
 } from "semantic-ui-react";
-import HomepageLayout from "./index";
 import HomepageHeading from "./components/home_page_layout";
 
 /* Heads up!
@@ -24,7 +24,7 @@ import HomepageHeading from "./components/home_page_layout";
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-  state = { percent: 0, iconTitle: "Title of your company" };
+  state = { percent: 0 };
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll.bind(this));
@@ -107,6 +107,7 @@ class DesktopContainer extends Component {
                 />
                 {iconTitle}
               </Menu.Item>
+              <Menu.Item position='right' style={{marginRight: "4em"}}><Radio toggle label='Burmese'/></Menu.Item>
             </Menu>
 
             <HomepageHeading 

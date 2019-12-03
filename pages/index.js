@@ -3,6 +3,7 @@ import React, { Component } from "react";
 
 import ResponsiveContainer from "./home";
 import FeatureComponent from "./components/feature";
+import {Container, Header, Divider, Icon} from "semantic-ui-react";
 
 const application = "travelApp";
 const data = require(`../static/data/${application}_data.json`);
@@ -23,6 +24,25 @@ export default class HomepageLayout extends Component {
       facebook={data.socialMedia.facebook}
       email={data.socialMedia.email}
       >
+        {data.introduction.title? <Container text style={{marginTop: '50px', marginBottom: "0"}}>
+          <Header as={data.introduction.titleSize}>{data.introduction.title}</Header>
+          {data.introduction.paragraphs.map((paragraph, index)=>{
+            return (
+              <p>
+                {paragraph}
+              </p>
+            )
+          })}
+        </Container>: ""}
+        
+        {data.divider.wording? <Divider horizontal style={{padding: "4em 0em 0em 0em"}}>
+          <Header as={data.divider.wordSize}>
+            <Icon name='tag' />
+              {data.divider.wording}
+          </Header>
+          
+        </Divider>: ""}
+        
         {data.features.map((feature, index) => {
           let { header, description, src, imageSrc,
             isVideo, videoSource, videoPlaceholderImage,

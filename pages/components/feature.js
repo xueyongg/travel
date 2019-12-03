@@ -42,7 +42,7 @@ export default class FeatureComponent extends Component {
     } = this.state;
     
     return (
-      <Segment style={{ padding: "8em 0em" }} vertical>
+      <Segment style={{ padding: "4em 0em 4em 0em" }} vertical>
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             {imagePosition === "left" ? (
