@@ -14,6 +14,8 @@ export default class HomepageLayout extends Component {
       <ResponsiveContainer 
       landingTitle={data.header.landingTitle}
       landingSubtitle={data.header.landingSubtitle}
+      landingTitleColor={data.header.landingTitleColor}
+      landingSubtitleColor={data.header.landingSubtitleColor}
       iconTitle={data.header.iconTitle} 
       iconImageSrc={data.header.iconImageSrc}
       headerImageSrc={data.header.imageSrc}

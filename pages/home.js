@@ -92,7 +92,11 @@ class DesktopContainer extends Component {
               pointing={!fixed}
               secondary={!fixed}
               size="large"
-              style={{ marginBottom: 0, top: fixed ? 5 : 0 }}
+              style={{ 
+                marginBottom: 0, 
+                top: fixed ? 5 : 0,
+                border: "none" 
+              }}
             >
               <Menu.Item as="a" icon>
                 <Image

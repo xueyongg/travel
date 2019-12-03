@@ -36,15 +36,7 @@ class HomepageHeading extends Component {
   };
 
   componentDidMount() {
-    let currentState = this.state;
-    currentState.mobile = this.props.mobile;
-    currentState.landingTitle = this.props.landingTitle;
-    currentState.landingSubtitle = this.props.landingSubtitle;
-    currentState.headerImageSrc = this.props.headerImageSrc;
-    currentState.twitter = this.props.twitter;
-    currentState.facebook = this.props.facebook;
-    currentState.email = this.props.email;
-    this.setState(currentState);
+    this.setState(this.props);
   }
 
   handleOverlayRef = c => {
@@ -60,7 +52,9 @@ class HomepageHeading extends Component {
   unStickOverlay = () => this.setState({ overlayFixed: false });
 
   render() {
-    let { mobile, overlayFixed, overlayRect, landingTitle, landingSubtitle,
+    let { mobile, overlayFixed, overlayRect, 
+      landingTitle,landingTitleColor
+      , landingSubtitle, landingSubtitleColor,
       twitter, facebook, email } = this.state;
     const overlayStyle = {
       float: "left",
@@ -86,12 +80,12 @@ class HomepageHeading extends Component {
     };
 
     return (
-      <Container text>
+      <Container text>{landingSubtitleColor}
         <Header
           as="h1"
           content={landingTitle}
-          inverted
           style={{
+            color: landingTitleColor,
             fontSize: mobile ? "2em" : "4em",
             fontWeight: "normal",
             marginBottom: 0,
@@ -101,8 +95,8 @@ class HomepageHeading extends Component {
         <Header
           as="h2"
           content={landingSubtitle}
-          inverted
           style={{
+            color: landingSubtitleColor,
             fontSize: mobile ? "1.5em" : "1.7em",
             fontWeight: "normal",
             marginTop: mobile ? "0.5em" : "1.5em"
@@ -174,6 +168,8 @@ HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
   landingTitle: PropTypes.string,
   landingSubtitle: PropTypes.string,
+  landingTitleColor: PropTypes.string,
+  landingSubtitleColor: PropTypes.string,
   twitter: PropTypes.string,
   facebook: PropTypes.string,
   email: PropTypes.string,

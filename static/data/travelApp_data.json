@@ -1,10 +1,13 @@
 {
   "header": {
     "iconTitle": "Personal Journey",
+    
     "iconImageSrc":"/static/images/icon/T.jpg",
     "landingTitle": "Your One-stop Travel Solution",
+    "landingTitleColor": "black",
     "landingSubtitle": "Plan | Translate | Discover | Jot",
-    "imageSrc": ""
+    "landingSubtitleColor": "black",
+    "imageSrc": "https://images.unsplash.com/photo-1575275400619-80ea3bb088b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
   },
   "socialMedia": {
     "twitter": "https://www.twitter.com",
