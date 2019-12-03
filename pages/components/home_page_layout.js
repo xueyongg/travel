@@ -17,6 +17,7 @@ import {
   Visibility,
   Progress
 } from "semantic-ui-react";
+import Link from "next/link"
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
@@ -138,10 +139,16 @@ class HomepageHeading extends Component {
 
  
             {twitter && 
-              <Menu.Item as="a" href={twitter} target="_blank">
-              <Icon name="twitter" />
-              Twitter
-            </Menu.Item>
+                <Link
+                  href={twitter}
+                  passHref
+                  prefetch
+                > 
+                  <Menu.Item>
+                      <Icon name="twitter" />
+                      Twitter
+                  </Menu.Item>
+                </Link>
              }
             
             {facebook && 

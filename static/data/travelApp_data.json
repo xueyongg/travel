@@ -7,24 +7,26 @@
     "imageSrc": ""
   },
   "socialMedia": {
-    "twitter": "www.twitter.com",
-    "facebook": "facebook.com/phuaxueyong",
-    "email": "xueyongjoshua@gmail.com"
+    "twitter": "https://www.twitter.com",
+    "facebook": "https://facebook.com/phuaxueyong",
+    "email": "mailto:xueyongjoshua@gmail.com"
   },
   "features": [
     {
       "header": "Memories",
       "description": "Log your travel memories down. We offer a simple way for you to share photos, jot down memories and geo-tag restaurants.",
+      "imageSrc": "https://phuaxueyong.com/static/images/about/instagram/seven.JPG",
       "src": "O6Xo21L0ybE",
       "isVideo": true,
       "videoSource": "youtube",
-      "videoPlaceholderImage": "",
-      "buttonUrl": "",
-      "buttonText": ""
+      "videoPlaceholderImage": "https://phuaxueyong.com/static/images/about/instagram/nine.JPG",
+      "buttonUrl": "https://www.phuaxueyong.com",
+      "buttonText": "Visit my web"
     },
     {
       "header": "Plan Your Budgets",
       "description": "Track your bills and other group shared expenses, so that everyone gets paid back.",
+      "imageSrc": "https://phuaxueyong.com/static/images/about/instagram/five.JPG",
       "src": "",
       "isVideo": false,
       "videoSource": "",
@@ -35,6 +37,7 @@
     {
       "header": "Translation",
       "description": "Use your camera to translate menus or directories, or simply key in words for translation.",
+      "imageSrc": "https://phuaxueyong.com/static/images/about/instagram/nine.JPG",
       "src": "",
       "isVideo": false,
       "videoSource": "",
@@ -45,6 +48,7 @@
     {
       "header": "Plan Your Itineraries",
       "description": "We are here to help you visualise and plan your multi-day or multi-city trips! Upgrade to premium to view your trip on an offline map.",
+      "imageSrc": "https://phuaxueyong.com/static/images/about/instagram/four.JPG",
       "src": "",
       "isVideo": false,
       "videoSource": "",
