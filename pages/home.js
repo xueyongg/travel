@@ -53,7 +53,8 @@ class DesktopContainer extends Component {
   };
 
   render() {
-    const { children, landingTitle, iconTitle, iconImageSrc, headerImageSrc} = this.props;
+    const { children, landingTitle, landingSubtitle,
+      iconTitle, iconImageSrc, headerImageSrc, twitter, facebook, email} = this.props;
     const { fixed, percent } = this.state;
     return (
       <Responsive
@@ -76,7 +77,13 @@ class DesktopContainer extends Component {
           <Segment
             inverted
             textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
+            style={{ 
+              minHeight: 700, 
+              padding: "1em 0em",
+              backgroundImage: `url("${headerImageSrc}")`,
+              backgroundRepeat: "no-repeat",
+              textAlign: "center"
+            }}
             vertical
           >
             <Menu
@@ -99,8 +106,14 @@ class DesktopContainer extends Component {
             </Menu>
 
             <HomepageHeading 
-            landingTitle={landingTitle}
-            headerImageSrc={headerImageSrc}/>
+              landingTitle={landingTitle}
+              headerImageSrc={headerImageSrc}
+              landingSubtitle={landingSubtitle}
+              twitter={twitter}
+              facebook={facebook}
+              email={email}
+            />
+            
           </Segment>
         </Visibility>
 
@@ -189,17 +202,25 @@ class ResponsiveContainer extends Component {
       <div>
         <DesktopContainer 
           landingTitle={this.props.landingTitle}
+          landingSubtitle={this.props.landingSubtitle}
           iconTitle={this.props.iconTitle}
           iconImageSrc={this.props.iconImageSrc}
           headerImageSrc={this.props.headerImageSrc}
+          twitter={this.props.twitter}
+          facebook={this.props.facebook}
+          email={this.props.email}
         >
           {this.props.children}
           </DesktopContainer>
         <MobileContainer 
           landingTitle={this.props.landingTitle}
+          landingSubtitle={this.props.landingSubtitle}
           iconTitle={this.props.iconTitle}
           iconImageSrc={this.props.iconImageSrc}
           headerImageSrc={this.props.headerImageSrc}
+          twitter={this.props.twitter}
+          facebook={this.props.facebook}
+          email={this.props.email}
         >
           {this.props.children}
         </MobileContainer>

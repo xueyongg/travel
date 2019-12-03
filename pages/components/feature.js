@@ -16,6 +16,7 @@ import {
   Visibility,
   Progress
 } from "semantic-ui-react";
+import Link from "next/link";
 
 export default class FeatureComponent extends Component {
   state = {
@@ -24,6 +25,7 @@ export default class FeatureComponent extends Component {
     src: "",
     imagePosition: "",
     buttonText: "",
+    buttonUrl: "",
     isVideo: false
   };
 
@@ -37,7 +39,8 @@ export default class FeatureComponent extends Component {
       src,
       imagePosition,
       buttonText,
-      isVideo
+      isVideo,
+      buttonUrl
     } = this.state;
     return (
       <Segment style={{ padding: "8em 0em" }} vertical>
@@ -62,16 +65,15 @@ export default class FeatureComponent extends Component {
                   <Embed
                   autoplay={false}
                   color='white'
-                  hd={false}
-                  id='gJscrxxl_Bg'
+                  id={src}
                   iframe={{
                     allowFullScreen: true,
                     style: {
                       padding: 10,
                     },
                   }}
-                  placeholder='/images/image-16by9.png'
-                  source='youtube'
+                  placeholder={src}
+                  source='youtube' // youtube || vimeo || undefined
                   />
                   : 
                   <Image bordered rounded fluid src={src} />
@@ -81,13 +83,22 @@ export default class FeatureComponent extends Component {
               ""
             )}
           </Grid.Row>
-          {/* <Grid.Row>
+          {buttonUrl && <Grid.Row>
             <Grid.Column textAlign="center">
-              <Button size="huge">
+            <Link
+                href={buttonUrl}
+                passHref
+                prefetch
+              >
+              <Button size="huge" labelPosition='right' > 
                 {buttonText ? buttonText : "Check Them Out"}
+                <Icon name="angle right" />
               </Button>
+              </Link>
             </Grid.Column>
-          </Grid.Row> */}
+          </Grid.Row>
+          }
+          
         </Grid>
       </Segment>
     );

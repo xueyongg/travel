@@ -27,14 +27,22 @@ class HomepageHeading extends Component {
   state = {
     overlayFixed: false,
     mobile: false,
-    landingTitle: "this is a placeholder title"
+    landingTitle: "this is a placeholder title",
+    landingSubtitle: "this is placeholder subtitle",
+    twitter: "",
+    facebook: "",
+    email: ""
   };
 
   componentDidMount() {
     let currentState = this.state;
     currentState.mobile = this.props.mobile;
     currentState.landingTitle = this.props.landingTitle;
+    currentState.landingSubtitle = this.props.landingSubtitle;
     currentState.headerImageSrc = this.props.headerImageSrc;
+    currentState.twitter = this.props.twitter;
+    currentState.facebook = this.props.facebook;
+    currentState.email = this.props.email;
     this.setState(currentState);
   }
 
@@ -51,7 +59,8 @@ class HomepageHeading extends Component {
   unStickOverlay = () => this.setState({ overlayFixed: false });
 
   render() {
-    let { mobile, overlayFixed, overlayRect, landingTitle,headerImageSrc } = this.state;
+    let { mobile, overlayFixed, overlayRect, landingTitle, landingSubtitle,
+      twitter, facebook, email } = this.state;
     const overlayStyle = {
       float: "left",
       margin: "0em 3em 3em 0em"
@@ -90,7 +99,7 @@ class HomepageHeading extends Component {
         />
         <Header
           as="h2"
-          content="Plan | Translate | Discover | Jot"
+          content={landingSubtitle}
           inverted
           style={{
             fontSize: mobile ? "1.5em" : "1.7em",
@@ -110,6 +119,7 @@ class HomepageHeading extends Component {
           ref={this.handleOverlayRef}
           style={overlayFixed ? fixedOverlayStyle : overlayStyle}
         >
+          
           <Menu
             icon="labeled"
             style={
@@ -125,19 +135,27 @@ class HomepageHeading extends Component {
             }
             vertical={overlayFixed ? true : false}
           >
-            <Menu.Item>
+
+ 
+            {twitter && 
+              <Menu.Item as="a" href={twitter} target="_blank">
               <Icon name="twitter" />
               Twitter
             </Menu.Item>
-            <Menu.Item>
+             }
+            
+            {facebook && 
+            <Menu.Item as="a" href={facebook} target="_blank">
               <Icon name="facebook" />
               Share
             </Menu.Item>
-
-            <Menu.Item>
+            }
+            {email &&
+            <Menu.Item as="a" href={email} target="_blank">
               <Icon name="mail" />
               Email
             </Menu.Item>
+            }
           </Menu>
         </div>
       </Container>
@@ -147,7 +165,11 @@ class HomepageHeading extends Component {
 
 HomepageHeading.propTypes = {
   mobile: PropTypes.bool,
-  landingTitle: PropTypes.string
+  landingTitle: PropTypes.string,
+  landingSubtitle: PropTypes.string,
+  twitter: PropTypes.string,
+  facebook: PropTypes.string,
+  email: PropTypes.string,
 };
 
 export default HomepageHeading;

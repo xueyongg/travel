@@ -3,37 +3,50 @@
     "iconTitle": "Personal Journey",
     "iconImageSrc":"/static/images/icon/T.jpg",
     "landingTitle": "Your One-stop Travel Solution",
-    "imageSrc": "/static/images/header/songkids2019.jpg"
+    "landingSubtitle": "Plan | Translate | Discover | Jot",
+    "imageSrc": ""
   },
   "socialMedia": {
-    "twitter": "",
-    "facebook": "",
-    "email": ""
+    "twitter": "www.twitter.com",
+    "facebook": "facebook.com/phuaxueyong",
+    "email": "xueyongjoshua@gmail.com"
   },
   "features": [
     {
       "header": "Memories",
       "description": "Log your travel memories down. We offer a simple way for you to share photos, jot down memories and geo-tag restaurants.",
       "src": "",
-      "isVideo": false
+      "isVideo": false,
+      "source": "",
+      "buttonUrl": "dd",
+      "buttonText": "dd"
     },
     {
       "header": "Plan Your Budgets",
       "description": "Track your bills and other group shared expenses, so that everyone gets paid back.",
       "src": "",
-      "isVideo": false
+      "isVideo": false,
+      "source": "",
+      "buttonUrl": "",
+      "buttonText": ""
     },
     {
       "header": "Translation",
       "description": "Use your camera to translate menus or directories, or simply key in words for translation.",
       "src": "",
-      "isVideo": false
+      "isVideo": false,
+      "source": "",
+      "buttonUrl": "",
+      "buttonText": ""
     },
     {
       "header": "Plan Your Itineraries",
       "description": "We are here to help you visualise and plan your multi-day or multi-city trips! Upgrade to premium to view your trip on an offline map.",
       "src": "",
-      "isVideo": false
+      "isVideo": false,
+      "source": "",
+      "buttonUrl": "",
+      "buttonText": ""
     }
   ]
 }
