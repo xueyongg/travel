@@ -19,23 +19,30 @@ import {
 import ResponsiveContainer from "./home";
 import FeatureComponent from "./components/feature";
 const data = require("../static/data/data.json");
-
+const placeholderImagePath = "../static/images/placeholder/image-placeholder.png";
 export default class HomepageLayout extends Component {
   render() {
     return (
-      <ResponsiveContainer>
-        {data.features.map((feature, i) => {
-          let { header, description, image } = feature;
+      <ResponsiveContainer 
+      landingTitle={data.header.landingTitle}
+      iconTitle={data.header.iconTitle} 
+      iconImageSrc={data.header.iconImageSrc}
+      headerImageSrc={data.header.imageSrc}
+      >
+        {data.features.map((feature, index) => {
+          let { header, description, src, isVideo } = feature;
           return (
             <FeatureComponent
+              key={index}
               header={header}
               description={description}
-              imageURL={
-                image
-                  ? image
-                  : "https://react.semantic-ui.com/assets/images/wireframe/image-text.png"
+              src={
+                src
+                  ? src
+                  : placeholderImagePath
               }
-              imagePosition={i % 2 === 0 ? "right" : "left"}
+              isVideo={isVideo}
+              imagePosition={index % 2 === 0 ? "right" : "left"}
             />
           );
         })}

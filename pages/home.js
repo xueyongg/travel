@@ -24,7 +24,7 @@ import HomepageHeading from "./components/home_page_layout";
  * It can be more complicated, but you can create really flexible markup.
  */
 class DesktopContainer extends Component {
-  state = { percent: 0 };
+  state = { percent: 0, iconTitle: "Title of your company" };
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll.bind(this));
@@ -39,6 +39,7 @@ class DesktopContainer extends Component {
       Number(event.target.documentElement.scrollHeight) -
       Number(event.target.documentElement.clientHeight);
     let currentHeight = Number(event.target.documentElement.scrollTop);
+
     let percent = currentHeight / totalHeight;
     this.setState({
       percent: percent * 100
@@ -52,7 +53,7 @@ class DesktopContainer extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, landingTitle, iconTitle, iconImageSrc, headerImageSrc} = this.props;
     const { fixed, percent } = this.state;
     return (
       <Responsive
@@ -88,16 +89,18 @@ class DesktopContainer extends Component {
             >
               <Menu.Item as="a" icon>
                 <Image
-                  src="/static/images/icon/T.jpg"
+                  src={iconImageSrc}
                   size="mini"
                   spaced
                   circular
                 />
-                Title of the company
+                {iconTitle}
               </Menu.Item>
             </Menu>
 
-            <HomepageHeading />
+            <HomepageHeading 
+            landingTitle={landingTitle}
+            headerImageSrc={headerImageSrc}/>
           </Segment>
         </Visibility>
 
@@ -120,7 +123,7 @@ class MobileContainer extends Component {
     this.setState({ sidebarOpened: !this.state.sidebarOpened });
 
   render() {
-    const { children } = this.props;
+    const { children, landingTitle } = this.props;
     const { sidebarOpened } = this.state;
 
     return (
@@ -169,7 +172,7 @@ class MobileContainer extends Component {
                   </Menu.Item>
                 </Menu>
               </Container>
-              <HomepageHeading mobile />
+              <HomepageHeading mobile landingTitle={landingTitle}/>
             </Segment>
 
             {children}
@@ -184,15 +187,33 @@ class ResponsiveContainer extends Component {
   render() {
     return (
       <div>
-        <DesktopContainer>{this.props.children}</DesktopContainer>
-        <MobileContainer>{this.props.children}</MobileContainer>
+        <DesktopContainer 
+          landingTitle={this.props.landingTitle}
+          iconTitle={this.props.iconTitle}
+          iconImageSrc={this.props.iconImageSrc}
+          headerImageSrc={this.props.headerImageSrc}
+        >
+          {this.props.children}
+          </DesktopContainer>
+        <MobileContainer 
+          landingTitle={this.props.landingTitle}
+          iconTitle={this.props.iconTitle}
+          iconImageSrc={this.props.iconImageSrc}
+          headerImageSrc={this.props.headerImageSrc}
+        >
+          {this.props.children}
+        </MobileContainer>
       </div>
     );
   }
 }
 
 ResponsiveContainer.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  landingTitle: PropTypes.string,
+  iconTitle: PropTypes.string,
+  iconImageSrc: PropTypes.string,
+  headerImageSrc: PropTypes.string
 };
 DesktopContainer.propTypes = {
   children: PropTypes.node

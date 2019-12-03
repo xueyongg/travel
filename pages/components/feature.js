@@ -18,7 +18,14 @@ import {
 } from "semantic-ui-react";
 
 export default class FeatureComponent extends Component {
-  state = {};
+  state = {
+    header: "",
+    description: "",
+    src: "",
+    imagePosition: "",
+    buttonText: "",
+    isVideo: false
+  };
 
   componentWillMount() {
     this.state = this.props;
@@ -27,9 +34,10 @@ export default class FeatureComponent extends Component {
     let {
       header,
       description,
-      imageURL,
+      src,
       imagePosition,
-      buttonText
+      buttonText,
+      isVideo
     } = this.state;
     return (
       <Segment style={{ padding: "8em 0em" }} vertical>
@@ -37,7 +45,7 @@ export default class FeatureComponent extends Component {
           <Grid.Row>
             {imagePosition === "left" ? (
               <Grid.Column floated="left" width={6}>
-                <Image bordered rounded fluid src={imageURL} />
+                <Image bordered rounded fluid src={src} />
               </Grid.Column>
             ) : (
               ""
@@ -50,7 +58,24 @@ export default class FeatureComponent extends Component {
             </Grid.Column>
             {imagePosition === "right" ? (
               <Grid.Column floated="right" width={6}>
-                <Image bordered rounded fluid src={imageURL} />
+                {isVideo? 
+                  <Embed
+                  autoplay={false}
+                  color='white'
+                  hd={false}
+                  id='gJscrxxl_Bg'
+                  iframe={{
+                    allowFullScreen: true,
+                    style: {
+                      padding: 10,
+                    },
+                  }}
+                  placeholder='/images/image-16by9.png'
+                  source='youtube'
+                  />
+                  : 
+                  <Image bordered rounded fluid src={src} />
+              }
               </Grid.Column>
             ) : (
               ""
@@ -67,4 +92,13 @@ export default class FeatureComponent extends Component {
       </Segment>
     );
   }
+}
+
+FeatureComponent.PropTypes = {
+  header: PropTypes.string,
+  description: PropTypes.string,
+  src: PropTypes.string,
+  imagePosition: PropTypes.string,
+  buttonText: PropTypes.string,
+  isVideo: PropTypes.bool,
 }

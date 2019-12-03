@@ -26,12 +26,15 @@ import {
 class HomepageHeading extends Component {
   state = {
     overlayFixed: false,
-    mobile: false
+    mobile: false,
+    landingTitle: "this is a placeholder title"
   };
 
   componentDidMount() {
     let currentState = this.state;
     currentState.mobile = this.props.mobile;
+    currentState.landingTitle = this.props.landingTitle;
+    currentState.headerImageSrc = this.props.headerImageSrc;
     this.setState(currentState);
   }
 
@@ -48,7 +51,7 @@ class HomepageHeading extends Component {
   unStickOverlay = () => this.setState({ overlayFixed: false });
 
   render() {
-    let { mobile, overlayFixed, overlayRect } = this.state;
+    let { mobile, overlayFixed, overlayRect, landingTitle,headerImageSrc } = this.state;
     const overlayStyle = {
       float: "left",
       margin: "0em 3em 3em 0em"
@@ -76,7 +79,7 @@ class HomepageHeading extends Component {
       <Container text>
         <Header
           as="h1"
-          content="Your One-stop Travel Solution"
+          content={landingTitle}
           inverted
           style={{
             fontSize: mobile ? "2em" : "4em",
@@ -143,7 +146,8 @@ class HomepageHeading extends Component {
 }
 
 HomepageHeading.propTypes = {
-  mobile: PropTypes.bool
+  mobile: PropTypes.bool,
+  landingTitle: PropTypes.string
 };
 
 export default HomepageHeading;
