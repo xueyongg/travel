@@ -32,6 +32,6 @@
     "semantic-ui-react": "^0.80.2"
   },
   "devDependencies": {
-    "serve": "^7.1.1"
+    "serve": "^7.1.3"
   }
 }
