@@ -27,7 +27,7 @@
     "express": "^4.16.3",
     "next": "^6.0.3",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react-dom": "^16.4.2",
     "semantic": "0.0.1",
     "semantic-ui-react": "^0.80.2"
   },
