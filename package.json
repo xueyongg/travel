@@ -24,7 +24,7 @@
   "homepage": "https://github.com/xueyongg/travel#readme",
   "dependencies": {
     "@zeit/next-css": "^0.2.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "next": "^6.0.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
